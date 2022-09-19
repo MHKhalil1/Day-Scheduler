@@ -35,3 +35,12 @@ scheduleData = {
 workdaySchedule.push(scheduleData)
 
 }
+
+// This will update the date to the current day
+function getCurrentDate() {
+    var currentDate = moment().format('dddd, MMMM Do');
+    $("#currentDay").text(currentDate);
+}
+
+
+
