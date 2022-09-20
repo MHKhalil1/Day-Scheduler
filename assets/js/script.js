@@ -42,5 +42,26 @@ function getCurrentDate() {
     $("#currentDay").text(currentDate);
 }
 
+// This will save the information in the "localStorage"
+function saveDataSchedule() {
+    localStorage.setItem("workdaySchedule", JSON.stringify(workdaySchedule));
+}
 
+// This will show the information
+function showDataSchedule() {
+    workdaySchedule.forEach(function (hour) {
+        $("#" + hour.id).val(hour.scheduleData)
+    })
+}
 
+// This function will process all the information
+function loadDataSchedule() {
+    var dataLoad = JSON.parse(localStorage.getItem("workdaySchedule"));
+
+    if (dataLoad) {
+        workdaySchedule = dataLoad;
+    }
+
+    saveDataSchedule()
+    showDataSchedule()
+}
