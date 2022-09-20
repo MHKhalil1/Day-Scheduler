@@ -8,6 +8,7 @@
 - I added a function allowing the date to be updated by the day.
 - I added a function to save the information in the local storage.
 - I added a function to process all the information.
+- I added a function to differ between past, present, future.
 ### Screenshot
 
 #### URL

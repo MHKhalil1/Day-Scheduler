@@ -65,3 +65,30 @@ function loadDataSchedule() {
     saveDataSchedule()
     showDataSchedule()
 }
+
+workdaySchedule.forEach(function(hour){
+
+    var timeRow = $("<form>")
+    .addClass("row");
+
+    $(".container").append(timeRow);
+
+    var timeField = $("<div>")
+    .addClass("col-md-2 hour")
+    .text(hour.showHour + hour.dayTimer);
+
+    var hourInsert = $("<div>")
+    .addClass("col-md-9 description p-0")
+    var hourData = $("<textarea>");
+    hourData.attr("id", hour.id);
+
+    if (hour.time == moment().format("HH")) {
+        hourData.addClass("present")
+    } else if (hour.time < moment().format("HH")) {
+        hourData.addClass("past")
+    } else if (hour.time > moment().format("HH")) {
+        hourData.addClass("future")
+    }
+
+    hourInsert.append(hourData);
+})
