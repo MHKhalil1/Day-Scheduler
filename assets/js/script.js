@@ -91,4 +91,22 @@ workdaySchedule.forEach(function(hour){
     }
 
     hourInsert.append(hourData);
+
+    // This is the save button
+    var saveIcon = $("<i class='far fa-save fa-lg'></i>")
+    var saveEnd = $("<button>")
+    .addClass("col-md-1 saveBtn");
+
+    saveEnd.append(saveIcon);
+    timeRow.append(timeField, hourInsert, saveEnd)
 })
+
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+
+    var saveData = $(this).siblings("description").children().attr("id");
+    workdaySchedule[saveData].scheduleData = $(this).siblings(".description").children().val();
+    saveDataSchedule();
+    showDataSchedule();
+})
+

@@ -9,6 +9,7 @@
 - I added a function to save the information in the local storage.
 - I added a function to process all the information.
 - I added a function to differ between past, present, future.
+- I added a function to allow the save icon to work.
 ### Screenshot
 
 #### URL
