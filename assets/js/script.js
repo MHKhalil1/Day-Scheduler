@@ -104,9 +104,12 @@ workdaySchedule.forEach(function(hour){
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
 
-    var saveData = $(this).siblings("description").children().attr("id");
+    var saveData = $(this).siblings(".description").children().attr("id");
     workdaySchedule[saveData].scheduleData = $(this).siblings(".description").children().val();
     saveDataSchedule();
     showDataSchedule();
 })
 
+// This retrieves the date at its most current moment
+getCurrentDate()
+loadDataSchedule()
