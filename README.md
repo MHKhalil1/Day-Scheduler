@@ -11,5 +11,6 @@
 - I added a function to differ between past, present, future.
 - I added a function to allow the save icon to work.
 ### Screenshot
-
+![This is a screenshot of the webpage](./assets/images/Day-Scheduler.png)
 #### URL
+https://mhkhalil1.github.io/Day-Scheduler/
